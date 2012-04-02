@@ -534,6 +534,9 @@ EOP;
         // 引用やURLなどをリンク
         $msg = $this->transLink($msg);
 
+	// ssspの展開
+	$msg = $this->expandSSSP($msg);
+
         // Wikipedia記法への自動リンク
         if ($_conf['mobile._linkToWikipeida']) {
             $msg = $this->_wikipediaFilter($msg);

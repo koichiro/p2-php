@@ -678,6 +678,17 @@ abstract class ShowThread
     }
 
     // }}}
+
+    // {{{ expandSSSP()
+    /**
+     * SSSP“WŠJ
+     */
+    public function expandSSSP($msg) {
+        $msg = preg_replace('{sssp://([-_.!~*\'()a-zA-Z0-9;\/?:\@&=+\$,%#]+)}', '<img src="http://$1">', $msg);
+        return $msg;
+    }
+    // }}}
+
     // {{{ _ngAbornCheck()
 
     /**
